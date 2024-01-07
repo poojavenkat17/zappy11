@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="alert/dist/sweetalert.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+  <title>Login Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Titillium+Web:ital,wght@0,200;0,400;1,200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Titillium+Web:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+<!-- Add to your <head> -->
+  <style>
+
+   
+.zappy {
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	width: 100%;
+  height: fit-content;
+	font-size: 40px;
+  text-align: center;
+  margin-top: 25px;;
+  font-family: 'Playfair Display'
+ 
+}
+    
+    body {
+      font-family: Arial, sans-serif;
+     bottom: 0;
+     background-image: url(./img/contactbanner.jpg);
+    }
+   
+    #userType{
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+     
+    }
+
+    
+
+    h1 {
+      margin-bottom: 20px;
+      color: #343a40;
+    }
+
+    form {
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #343a40;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+    }
+    .entire{
+
+align-items: center;
+justify-content: center;
+margin: 0 auto;
+margin-top: 100px;;;
+width: 90%;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+gap: 20%;;
+ }
+ .container{
+  background-color: #ffffff;
+      padding: 70px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 300px;
+      margin-top:2% ;
+
+ }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 12px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* a {
+      display: block;
+      margin-top: 15px;
+      color: #007bff;
+      text-decoration: none;
+      font-size: 14px;
+    } */
+    .contain{
+      float:left;
+     
+    }
+    img{
+width: 500px;
+height: 550px;;
+
+
+   
+
+    }
+    .reg {
+    background-image: linear-gradient(to right, #ff0303, #c67422);
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent;
+}
+
+    
+@media screen and (max-width: 880px) {
+  body {
+ 
+    width: 100%;
+    background-image: url(./img/bg.jpg);
+  }
+  .container{
+
+      text-align: center;
+      width: 900px;
+
+ }
+ .entire{
+
+align-items: center;
+justify-content: center;
+margin: 0 auto;
+
+width: 90%;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+
+ }
+.contain{
+  margin-top: 0;
+  margin-bottom: 10px;;
+}
+
+}
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<link href="https://fonts.cdnfonts.com/css/nabla" rel="stylesheet">
+                
+<body>
+
+
+  
+
+  <div class="entire">
+    
+  <div class="container">
+    <h3 class="zappy">Zappy Photography</h3>
+  
+    <h2 class=reg><%= textToDisplay %></h2>
+    <form id="loginForm" action="/login" method="POST">
+      <label for="Email">Email:</label>
+      <input type="email" id="Email" name="Email" required>
+      <label for="Password">Password:</label>
+      
+      <input type="password" id="Password" name="Password" required>
+      <label for="userType">Select User Type:</label>
+      <select id="userType" name='userType' onchange="toggleSecretField()">
+          <option value="User" name='userType'>User</option>
+          <option value="Admin" name='userType'>Admin</option>
+      </select>
+      
+      <div id="secretKey" style="display: none;">
+          <label for="secretKey">Enter Secret Key:</label>
+          <input type="password" id="secretKey" name="secretKey">
+      </div>
+      
+      <script>
+      function toggleSecretField() {
+          var userTypeSelect = document.getElementById("userType");
+          var secretField = document.getElementById("secretKey");
+      
+          if (userTypeSelect.value === "Admin") {
+              secretField.style.display = "block";
+          } else {
+              secretField.style.display = "none";
+          }
+      }
+      </script>
+      <button type="submit" onclick="submitForm()" >Login</button>
+      
+    </form>
+   
+   
+<!--     
+    <a href="/register">New User? Register Here</a> -->
+  </div>
+</div>
+    
+  <script>
+    function submitForm() {
+        const form = document.getElementById("loginForm");
+        const formData = new FormData(form);
+
+        fetch("/login", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            if (data === "success") {
+                // Redirect to another page on successful login
+                window.location.href = "/store"; // Change to your desired URL
+            }
+             else {
+                // Update error message for incorrect password
+                const errorMessage = document.getElementById("error-message");
+                errorMessage.innerText = "Username or password is incorrect";
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+    }
+</script>
+</body>
+</html>
+
+
+    
+
